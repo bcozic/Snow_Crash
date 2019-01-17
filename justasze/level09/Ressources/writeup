@@ -1,0 +1,21 @@
+Once again, we have a binary and a token.
+
+By playing with the binary, we can see its logic is simple:
+It takes a string as a parameter, and runs through it, adding to
+each character its position in the string. Thus, "aaa" becomes "abc".
+
+We guess the token file countains much probably the application of the binary to
+the string we need. Thus, we hexdump it and get:
+
+-> \x66\x34\x6b\x6d\x6d\x36\x70\x7c\x3d\x82\x7f\x70\x82\x6e\x83\x82\x44\x42\x83\x44\x75\x7b\x7f\x8c\x89\x0a
+
+Then, with a little program in c, we can get the original string back:
+
+-> f3iji1ju5yuevaus41q1afiuq (we skipped the last non-displayable character).
+
+-> su flag09
+-> f3iji1ju5yuevaus41q1afiuq
+
+It works.
+
+We can now get the next flag.

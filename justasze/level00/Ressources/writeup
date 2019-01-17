@@ -1,0 +1,15 @@
+First, we search for files belonging to flag00
+-> find / -user flag00 2> /dev/null
+
+Two are found:
+
+/usr/sbin/john
+/rofs/usr/sbin/john
+
+The name is misleading, john is of no use here.
+Let's go to dcode.fr the first "cracking" tool found here is the caesar code.
+
+When run, we find something in rot15:
+->nottohardhere
+
+We can now get the next flag.

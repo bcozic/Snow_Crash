@@ -1,0 +1,11 @@
+Here, we have a binary that executes, once again, as flag07.
+We disassemble it in gdb, and we can see the main function is
+quite short. It will use the system function to cat an environment
+variable. After some tests, we can see that the said variable is
+LOGNAME. The, we just have to modify it to exectute some code.
+We can now get our flag directly:
+
+-> export LOGNAME=\`getflag\`
+-> ./level07
+
+We can now get the next flag.

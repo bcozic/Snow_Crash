@@ -1,0 +1,14 @@
+Here, we see two files, one of which is in php and reads a file, and prints
+a regex-based modified version of it. The catch is, the e modifier of the used function
+(preg_replace) is not safe, since it will try to execute the resulting pattern as php code.
+
+The other is an elf binary which calls the php script above, but with flag06's rights.
+Hence, we can create a file matching the regex containing code to be executed, like
+the system function. Let's use it to get a shell.
+
+-> echo '[x {${@system(bash)}}]' > /tmp/exploit
+-> ./level06 /tmp/exploit
+
+Aaaand, we have a shell as flag06.
+
+We can now get the next flag.

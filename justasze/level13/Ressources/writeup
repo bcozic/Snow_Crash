@@ -1,0 +1,7 @@
+Here, we see a binary. When we run it, we learn it expects us to have
+the UID 4242.
+We launch it with gdb, and proceed to overwrite the return value of
+setuid.
+Now that he thikns our uid is good, it kindly gives us the flag.
+
+Now we can get the last flag.
