@@ -18,11 +18,9 @@ In the code, we see a strange serie of cmp. We try one:
 The program crashes, but, just before, it prints something: fiumuikeil55xe9cu4dood66h
 Eh, that's the flag from level07 !
 
-Could this be ?!
+-> ju *0x8048ccb
 
--> -> ju *0x8048ccb
-
-wiok45aaoguiboiki2tuin6ub ... The flag of level06. You bast*rd !
+wiok45aaoguiboiki2tuin6ub ... The flag of level06.
 
 After some research, we finally find the flag we need:
 
@@ -37,5 +35,3 @@ And we have our final flag:
 -> su flag14
 -> 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
 -> Congratulation. Type getflag to get the key and send it to me the owner of this livecd :)
-
-This concludes this adventure. Bye.
