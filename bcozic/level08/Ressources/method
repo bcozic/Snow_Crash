@@ -1,0 +1,20 @@
+$>objdump -M intel -d level08
+
+(in <main>)
+
+80485af:	c7 44 24 04 93 87 04 	mov    DWORD PTR [esp+0x4],0x8048793
+80485b6:	08
+80485b7:	89 04 24             	mov    DWORD PTR [esp],eax
+80485ba:	e8 41 fe ff ff       	call   8048400 <strstr@plt>
+
+$>gdb
+(gdb)$> x/s 0x8048793
+
+0x8048793:	 "token"
+
+$>mv token tok
+$>./level08 tok
+
+quif5eloekouj29ke0vouxean
+
+password lvl09 : 25749xKZ8L7DkSCwJkT9dyv6f

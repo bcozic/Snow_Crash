@@ -1,0 +1,13 @@
+outside the vm:
+
+$>scp -P 4242 level02@10.13.0.191:/home/user/level02/level02.pcap Documents
+
+open with https://www.cloudshark.org
+
+after "password" read TCP payload for 39247->nupaper-ss[...]
+
+and you get :
+
+ft_waNDReL0L
+
+password lvl03 : kooda2puivaav1idi4f57q8iq

@@ -1,0 +1,13 @@
+$>find / -user flag00 2> /dev/null
+
+/usr/sbin/john
+/rofs/usr/sbin/john
+
+$>cat /usr/sbin/john
+
+cdiiddwpgswtgt
+
+code cesar +15
+-> nottoohardhere
+
+pass level01 : x24ti5gi3x0ol2eh4esiuxias

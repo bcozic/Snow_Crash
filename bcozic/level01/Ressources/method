@@ -1,0 +1,22 @@
+in vm :
+
+$>chmod 700 /home/user/level01
+$>setfacl -d -m u::rwx /home/user/level01
+
+outside of the vm :
+
+$>scp -P 4242 Downloads/john-1.8.0.tar.xz level01@10.13.0.191:/home/user/level01
+
+in vm :
+
+$>tar xvf john-1.8.0.tar.xz
+$>cd john-1.8.0/src
+$>make
+$>make clean generic
+$>cd ../run
+$>./john --test
+$>./john /etc/passwd
+
+abcdefg          (flag01)
+
+level02 password : f2av5il02puano7naaf6adaaf

