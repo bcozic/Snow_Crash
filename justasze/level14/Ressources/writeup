@@ -9,14 +9,14 @@ First, we set a breakpoint at the beginning of the main function:
 
 We now run the program. We can see that we are stopped because the program
 has detected we are debugging it. Could we force the execution to go to a
-given point ? We can indeed with the commad ju (it blindly jumps to an instruction).
+given point ? We can indeed with the command ju (it blindly jumps to an instruction).
 
 In the code, we see a strange serie of cmp. We try one:
 
 -> ju *0x8048b68
 
 The program crashes, but, just before, it prints something: fiumuikeil55xe9cu4dood66h
-Eh, that's the flag from level07 !
+This is level07's flag.
 
 -> ju *0x8048ccb
 
@@ -35,3 +35,5 @@ And we have our final flag:
 -> su flag14
 -> 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
 -> Congratulation. Type getflag to get the key and send it to me the owner of this livecd :)
+
+We have now gathered all the flags.

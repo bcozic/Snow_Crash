@@ -7,11 +7,11 @@ each character its position in the string. Thus, "aaa" becomes "abc".
 We guess the token file countains much probably the application of the binary to
 the string we need. Thus, we hexdump it and get:
 
--> \x66\x34\x6b\x6d\x6d\x36\x70\x7c\x3d\x82\x7f\x70\x82\x6e\x83\x82\x44\x42\x83\x44\x75\x7b\x7f\x8c\x89\x0a
+-> \x66\x34\x6b\x6d\x6d\x36\x70\x7c\x3d\x82\x7f\x70\x82\x6e\x83\x82\x44\x42\x83\x44\x75\x7b\x7f\x8c\x89
 
 Then, with a little program in c, we can get the original string back:
 
--> f3iji1ju5yuevaus41q1afiuq (we skipped the last non-displayable character).
+-> f3iji1ju5yuevaus41q1afiuq
 
 -> su flag09
 -> f3iji1ju5yuevaus41q1afiuq

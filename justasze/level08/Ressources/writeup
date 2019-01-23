@@ -1,6 +1,6 @@
 Once again, there is a binary executed with the rights we want.
 There is also a file named token, on which we have, of course, no rights.
-A quick look at the level08 binary objdump teaches us that it needs an argument,
+A quick look at the level08 binary objdump teaches us that it needs an argument, 
 which it will open and read. Of course, there is a catch, your argument, thus the
 file you want to read, must not contain the substring "token" (strstr is called).
 
