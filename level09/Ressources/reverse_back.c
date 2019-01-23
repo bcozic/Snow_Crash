@@ -1,12 +1,15 @@
 #include <stdio.h>
-#include <string.h>
 
-int	main(void)
+int main(int ac, char **av)
 {
-	char	str[] = "\x66\x34\x6b\x6d\x6d\x36\x70\x7c\x3d\x82\x7f\x70\x82\x6e\x83\x82\x44\x42\x83\x44\x75\x7b\x7f\x8c\x89\x0a";
-	size_t	len = strlen(str);
-
-	for(size_t i = 0; i < len; i++)
-		putchar(str[i] - (char)i);
-	return 0;
+	int i = 0;
+	if (ac != 2)
+	return (0);
+	while (av[1][i])
+	{
+		av[1][i] -= i;
+		i++;
+	}
+	printf("%s\n", av[1]);
+	return (0);
 }
