@@ -15,6 +15,6 @@ $> cat /usr/sbin/john
 -> cdiiddwpgswtgt
 
 When run, we find something in rot15:
--> nottohardhere
+-> nottoohardhere
 
 We can now get the next flag.
