@@ -4,6 +4,6 @@ The script uses echo to print a x variable, which is an argument.
 Thus, with curl, we can use access it, an get the flag by injecting the
 getflag comand as the script's argument.
 
-$>curl localhost:4747?x=\`getflag\`
+$> curl localhost:4747?x=\`getflag\`
 
 We can now get the next flag.

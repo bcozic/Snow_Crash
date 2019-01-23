@@ -1,7 +1,6 @@
-Here, an email nous inform there is a cronjob executed every
+Here, an email informs us there is a cronjob executed every
 2 minutes. This job do a bash -x with all files in /opt/openarenaserver.
-Since we can write there, we create a flag file contraining:
--> getflag > /tmp/flag
+Since we can write there, we create a flag file containing: "getflag > /tmp/flag"
 
 2 minutes later, we have our flag.
 

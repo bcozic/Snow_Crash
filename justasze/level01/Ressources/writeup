@@ -1,26 +1,26 @@
-By exploring the filesystem, we can see that we can read the /etc/passwd file,
+By exploring the filesystem, we see that we can read the /etc/passwd file,
 and that the flag01 passwd is hashed here, so we can use john the ripper on it.
 
 in vm :
 
-$>chmod 700 /home/user/level01
-$>setfacl -d -m u::rwx /home/user/level01
+$> chmod 700 /home/user/level01
+$> setfacl -d -m u::rwx /home/user/level01
 
 outside of the vm :
 
-$>scp -P 4242 Downloads/john-1.8.0.tar.xz level01@10.13.0.191:/home/user/level01
+$> scp -P 4242 Downloads/john-1.8.0.tar.xz level01@10.13.0.191:/home/user/level01
 
 in vm :
 
-$>tar xvf john-1.8.0.tar.xz
-$>cd john-1.8.0/src
-$>make
-$>make clean generic
-$>cd ../run
-$>./john --test
-$>./john /etc/passwd
+$> tar xvf john-1.8.0.tar.xz
+$> cd john-1.8.0/src
+$> make
+$> make clean generic
+$> cd ../run
+$> ./john --test
+$> ./john /etc/passwd
 
 We find that flag01's password is:
-->abcdefg
+-> abcdefg
 
 We can now get the next flag.

@@ -1,8 +1,8 @@
-$>scp -P 4242 level02@10.13.0.191:/home/user/level02/level02.pcap Documents
+$> scp -P 4242 level02@10.13.0.191:/home/user/level02/level02.pcap Documents
 
 Here, we find a pcap files, which is a bunch or packets.
-Using wiresahrk, we can see that this is a tentative of
-connexion. the password is given letter by letter, but with
+Using wireshark, we can see that this is a tentative of
+connexion. The password is given letter by letter, but with
 some replacements in the letters (DEL character 0x7F)
 
 The passowrd is:

