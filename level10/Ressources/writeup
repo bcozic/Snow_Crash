@@ -2,7 +2,7 @@ Here, still another binary with a token. After dumping it,
 we can see it seeks to read the file and transmits it via a socket on and
 given source (second argument) on the port 6969.
 However, before trying to open and read the token, the binary checks if the user
-have the access to it via the access fuction.
+have the access to it via the access() fuction.
 There is a known vulnerability here: one can use a file we own as an argument,
 so that access returns that we have the right, and then quickly replace the said file
 with a symbolic file we want to read (see exploit.sh in this repo).
