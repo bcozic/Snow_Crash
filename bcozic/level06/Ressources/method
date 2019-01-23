@@ -1,9 +1,0 @@
-$>chmod 777 .
-$>rm -f level06.php
-
-create file level06.php
-
-$>chmod 777 level06.php
-$>./flag06
-
-passwod lvl07 : wiok45aaoguiboiki2tuin6ub
